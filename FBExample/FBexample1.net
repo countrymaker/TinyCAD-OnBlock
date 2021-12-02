@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<netlist design="E:\githome\TinyCAD-OnBlock\FBExample\FBexample1.dsn">
+	<parts>
+		<part ref="FB1" name="ESP32C3_core">
+			<attribute name="$$SPICE">#include &lt;string&gt;
+uint32_t cycle = 0, idlecnt = 0, idlecnt_max = 1;
+
+void init() {
+	Serial.begin(115200);
+	delay(500);
+	Serial.println();
+	Serial.print(DSN_NAME); Serial.println(&quot; started...&quot;);
+}
+
+TimerHandle_t htimer;
+void static fTimer(TimerHandle_t htimer) { loopFBs(); }
+
+void start() {
+	htimer = xTimerCreate(&quot;fTimer&quot;, cycletime, pdTRUE, (void*)0, &amp;fTimer);
+	xTimerStart(htimer, 100);
+}
+
+void exec() {
+	if (cycle == 0) idlecnt_max = idlecnt;
+
+	cpu = 100 - 100 * idlecnt / idlecnt_max;
+	cyclecnt = ++cycle;
+	idlecnt = 0;
+}
+
+void loop() { idlecnt++; }
+</attribute>
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">core</attribute>
+			<attribute name="Type">void</attribute>
+			<attribute name="Seq">1</attribute>
+			<attribute name="uint32_t cycletime">1000</attribute>
+		</part>
+		<part ref="FB2" name="print_value">
+			<attribute name="$$SPICE">void init() {}
+
+void exec() {
+	String s = key.c_str() + String(value);
+	Serial.println(s);
+}
+</attribute>
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">peri</attribute>
+			<attribute name="Type">int</attribute>
+			<attribute name="Seq">1</attribute>
+			<attribute name="string key">&quot;cpu(%) = &quot;</attribute>
+		</part>
+		<part ref="FB3" name="digital_in">
+			<attribute name="$$SPICE">void init() { pinMode(pin_num, INPUT); }
+
+void exec() { out = digitalRead(pin_num); }</attribute>
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">peri</attribute>
+			<attribute name="Type">bool</attribute>
+			<attribute name="Seq">1</attribute>
+			<attribute name="uint8_t pin_num">3</attribute>
+		</part>
+		<part ref="FB6" name="digital_in">
+			<attribute name="$$SPICE">void init() { pinMode(pin_num, INPUT); }
+
+void exec() { out = digitalRead(pin_num); }</attribute>
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">peri</attribute>
+			<attribute name="Type">bool</attribute>
+			<attribute name="Seq">1</attribute>
+			<attribute name="uint8_t pin_num">4</attribute>
+		</part>
+		<part ref="FB5" name="and2">
+			<attribute name="$$SPICE">void init() { c = false; }
+
+void exec() { c = a &amp;&amp; b; }</attribute>
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">logic</attribute>
+			<attribute name="Type">bool</attribute>
+			<attribute name="Seq">1</attribute>
+		</part>
+		<part ref="FB4" name="digital_out">
+			<attribute name="$$SPICE">void init() { pinMode(pin_num, OUTPUT); }
+
+void exec() { digitalWrite(pin_num, in); }</attribute>
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">peri</attribute>
+			<attribute name="Type">bool</attribute>
+			<attribute name="Seq">1</attribute>
+			<attribute name="uint8_t pin_num">18</attribute>
+		</part>
+	</parts>
+	<nets>
+		<net name="_N_1" number="1">
+			<pin part="FB1" name="uint32_t cyclecnt" number="1" type="Output"/>
+		</net>
+		<net name="_N_2" number="2">
+			<pin part="FB1" name="uint8_t cpu" number="2" type="Output"/>
+			<pin part="FB2" name="T value" number="1" type="Input"/>
+		</net>
+		<net name="_N_3" number="3">
+			<pin part="FB3" name="bool out" number="1" type="Output"/>
+			<pin part="FB5" name="bool a" number="1" type="Input"/>
+		</net>
+		<net name="_N_4" number="4">
+			<pin part="FB6" name="bool out" number="1" type="Output"/>
+			<pin part="FB5" name="bool b" number="2" type="Input"/>
+		</net>
+		<net name="_N_5" number="5">
+			<pin part="FB5" name="bool c" number="3" type="Output"/>
+			<pin part="FB4" name="bool in" number="1" type="Input"/>
+		</net>
+	</nets>
+</netlist>
+
