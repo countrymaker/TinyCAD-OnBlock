@@ -141,15 +141,6 @@ void COnBlock::buildSeqList() {
 			}
 		}
 	}
-
-	for (size_t i = 0; i < SeqList.size(); i++) {
-		cout << "i = " << i << ", SeqList.refname = " << SeqList.at(i).refname << endl;
-		cout << "i = " << i << ", SeqList.symname = " << SeqList.at(i).symname << endl;
-		cout << "i = " << i << ", SeqList.pack = " << SeqList.at(i).pack << endl;
-		cout << "i = " << i << ", SeqList.seqnum = " << SeqList.at(i).seqnum << endl;
-		cout << "i = " << i << ", SeqList.ncout = " << SeqList.at(i).ncout << endl;
-		cout << endl;
-	}
 }
 
 string COnBlock::buildNet(const string& refname) {
@@ -213,9 +204,6 @@ void COnBlock::getValidParts() {
 						if (Nets.at(j).pintype.at(k) == "Output" && Nets.at(j).ncout.at(k) == false) outnum++;
 					}
 				}
-				
-				cout << "****** linknum = " << linknum << ", outnum = " << outnum << endl;
-
 				if (linknum == 1 && outnum == 1) ncout = true;
 				else if (linknum > 1 && outnum == 1) save = 1;
 			}
