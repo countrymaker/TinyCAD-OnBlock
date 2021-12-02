@@ -14,10 +14,10 @@ The modified lines of source files are marked with "// cmaker".
 ## Examples
 
 ### Function Block Capture
-![](./OnBlockCapture1.png)
+![](./img/OnBlockCapture1.png)
 
 ### Composed Arduino Source Code (.ino)
-![](./OnBlockCapture2.png)
+![](./img/OnBlockCapture2.png)
 
 ___
 
