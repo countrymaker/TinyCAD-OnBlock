@@ -3,6 +3,7 @@
  TinyCAD sources are modified by countrymaker 2021.
  This program keeps on GNU LGPL.
  The modified lines are marked with "// cmaker"
+
 */
 
 #include "stdafx.h"
