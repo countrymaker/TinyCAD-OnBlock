@@ -2,7 +2,7 @@
  TinyCAD-OnBlock is schematic capture for the purpose of using TinyCAD as a Function Block Editor.
  TinyCAD sources are modified by countrymaker 2021.
  This program keeps on GNU LGPL.
- The modified lines are marked with " // cmaker"
+ The modified lines are marked with "// cmaker"
 */
 
 #pragma once
