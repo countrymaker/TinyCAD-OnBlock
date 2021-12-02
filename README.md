@@ -9,7 +9,7 @@ This program keeps on GNU LGPL.
 
 ## Modifications
 Some TinyCAD sources are modified and 2 files(OnBlock.h, OnBlock.cpp) are added in src by countrymaker.  
-The modified lines of src files are marked with " // cmaker".  
+The modified lines of source files are marked with " // cmaker".  
 
 ## Examples
 
