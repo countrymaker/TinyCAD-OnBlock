@@ -1,5 +1,5 @@
 // E:\githome\TinyCAD-OnBlock\FBExample\FBexample1\FBexample1.ino composed in TinyCad-OnBlock 2021
-// 2021-12-04 07:42:22 created.
+// 2021-12-04 07:44:46 created.
 // 11 FB-classes generated.
 // 16 FB-instances generated.
 // Unconnected FBs are ignored.
@@ -272,7 +272,7 @@ constant_0 FB14;
 print_string FB15;
 constant_string FB16("\n");
 constant_1 FB5;
-print_value<int> FB2("cpu = ");
+print_value<int> FB2("cpu(%) = ");
 
 // -----------------------------------------------------------------
 // Calling Sequences 

@@ -230,7 +230,7 @@ void exec() {
 			<attribute name="Package">peri</attribute>
 			<attribute name="Type">int</attribute>
 			<attribute name="Seq">2</attribute>
-			<attribute name="string key">&quot;cpu = &quot;</attribute>
+			<attribute name="string key">&quot;cpu(%) = &quot;</attribute>
 		</part>
 	</parts>
 	<nets>

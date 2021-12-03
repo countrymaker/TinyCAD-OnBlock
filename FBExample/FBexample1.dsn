@@ -396,7 +396,7 @@ void exec() { digitalWrite(pin_num, in); }</DEFAULT>
 				<TEXT pos='32.50000,24.50000' direction='3' font='6' color='000000'>&gt;</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='6'>
+		<SYMBOLDEF id='5'>
 			<NAME type='1'>constant_1</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -459,7 +459,7 @@ void exec() { out = 1; }</DEFAULT>
 				<TEXT pos='30.50000,24.00000' direction='3' font='7' color='000000'>1</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='7'>
+		<SYMBOLDEF id='6'>
 			<NAME type='1'>counter_en_clr</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -524,7 +524,7 @@ void exec() {
 				<RECTANGLE a='57.00000,51.00000' b='66.00000,57.00000' style='4' fill='0'/>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='8'>
+		<SYMBOLDEF id='7'>
 			<NAME type='1'>constant_0</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -587,7 +587,7 @@ void exec() { out = 0; }</DEFAULT>
 				<TEXT pos='30.50000,24.00000' direction='3' font='7' color='000000'>0</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='9'>
+		<SYMBOLDEF id='8'>
 			<NAME type='1'>print_string</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -649,7 +649,7 @@ void exec() {
 				<TEXT pos='26.00000,21.00000' direction='3' font='3' color='000000'>string</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='10'>
+		<SYMBOLDEF id='9'>
 			<NAME type='1'>constant_string</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -718,7 +718,7 @@ void exec() { out = val; }</DEFAULT>
 				</POLYGON>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='11'>
+		<SYMBOLDEF id='10'>
 			<NAME type='1'>ESP32C3_core</NAME>
 			<REF type='0'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -815,7 +815,7 @@ void loop() { idlecnt++; }
 				<TEXT pos='41.00000,27.00000' direction='3' font='3' color='FF0000'>cpu(%)</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='12'>
+		<SYMBOLDEF id='11'>
 			<NAME type='1'>ESP32_wifi_station</NAME>
 			<REF type='0'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -937,7 +937,7 @@ void exec() {
 			<COLOR_NOTETEXT_LINE>FF0000</COLOR_NOTETEXT_LINE>
 			<COLOR_NOTETEXT_TEXT>FF0000</COLOR_NOTETEXT_TEXT>
 		</OPTIONS>
-		<SYMBOL id='11' pos='46.00000,29.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='10' pos='46.00000,29.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='0' description='Ref' value='FB1' show='1' pos='-27.00000,-15.00000'/>
 			<FIELD type='1' description='Name' value='ESP32C3_core' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='core' show='0' pos='0.00000,-7.00000'/>
@@ -1042,7 +1042,7 @@ void exec() { digitalWrite(pin_num, in); }' show='0' pos='0.00000,0.00000'/>
 		<WIRE a='37.00000,70.00000' b='44.00000,70.00000'/>
 		<WIRE a='52.00000,69.00000' b='146.00000,69.00000'/>
 		<NOCONNECT pos='46.00000,24.00000'/>
-		<SYMBOL id='12' pos='46.00000,56.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='11' pos='46.00000,56.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='0' description='Ref' value='FB3' show='1' pos='-27.00000,-18.00000'/>
 			<FIELD type='1' description='Name' value='ESP32_wifi_station' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='peri' show='0' pos='0.00000,-8.00000'/>
@@ -1109,7 +1109,7 @@ void exec() { digitalWrite(pin_num, in); }' show='0' pos='0.00000,0.00000'/>
 		<WIRE a='131.00000,61.00000' b='131.00000,51.00000'/>
 		<WIRE a='46.00000,51.00000' b='131.00000,51.00000'/>
 		<JUNCTION pos='131.00000,51.00000'/>
-		<SYMBOL id='7' pos='30.00000,91.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='6' pos='30.00000,91.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='FB13' show='0' pos='0.00000,-4.00000'/>
 			<FIELD type='1' description='Name' value='counter_en_clr' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { cnt = {}; }
@@ -1147,7 +1147,7 @@ void exec() {
 			<HINT pin='1' net='9'/>
 		</SYMBOL>
 		<WIRE a='30.00000,86.00000' b='136.00000,86.00000'/>
-		<SYMBOL id='6' pos='17.00000,88.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='5' pos='17.00000,88.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='FB12' show='0' pos='0.00000,-3.00000'/>
 			<FIELD type='1' description='Name' value='constant_1' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
@@ -1160,7 +1160,7 @@ void exec() { out = 1; }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Seq' value='0' show='0' pos='0.00000,3.00000'/>
 			<HINT pin='1' net='8'/>
 		</SYMBOL>
-		<SYMBOL id='8' pos='17.00000,91.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='7' pos='17.00000,91.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='FB14' show='0' pos='0.00000,-3.00000'/>
 			<FIELD type='1' description='Name' value='constant_0' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
@@ -1173,7 +1173,7 @@ void exec() { out = 0; }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Seq' value='0' show='0' pos='0.00000,3.00000'/>
 			<HINT pin='1' net='10'/>
 		</SYMBOL>
-		<SYMBOL id='9' pos='158.00000,102.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='8' pos='158.00000,102.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='FB15' show='0' pos='0.00000,-5.00000'/>
 			<FIELD type='1' description='Name' value='print_string' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
@@ -1189,7 +1189,7 @@ void exec() {
 			<FIELD type='0' description='Seq' value='5' show='1' pos='-1.00000,-9.00000'/>
 			<HINT pin='1' net='11'/>
 		</SYMBOL>
-		<SYMBOL id='10' pos='139.00000,102.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='9' pos='139.00000,102.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='FB16' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Name' value='constant_string' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
@@ -1203,7 +1203,7 @@ void exec() { out = val; }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='0' description='string val' value='&quot;\n&quot;' show='1' pos='-8.00000,-2.00000'/>
 			<HINT pin='1' net='11'/>
 		</SYMBOL>
-		<SYMBOL id='6' pos='15.00000,53.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='5' pos='15.00000,53.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='FB5' show='0' pos='0.00000,-3.00000'/>
 			<FIELD type='1' description='Name' value='constant_1' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
@@ -1231,7 +1231,7 @@ void exec() {
 			<FIELD type='1' description='Package' value='peri' show='0' pos='0.00000,-5.00000'/>
 			<FIELD type='1' description='Type' value='int' show='1' pos='-4.00000,2.00000'/>
 			<FIELD type='0' description='Seq' value='2' show='1' pos='-1.00000,-13.00000'/>
-			<FIELD type='0' description='string key' value='&quot;cpu = &quot;' show='1' pos='-12.00000,-6.00000'/>
+			<FIELD type='0' description='string key' value='&quot;cpu(%) = &quot;' show='1' pos='-12.00000,-6.00000'/>
 			<HINT pin='1' net='2'/>
 		</SYMBOL>
 		<WIRE a='46.00000,27.00000' b='136.00000,27.00000'/>
