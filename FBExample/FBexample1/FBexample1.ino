@@ -1,5 +1,5 @@
 // E:\githome\TinyCAD-OnBlock\FBExample\FBexample1\FBexample1.ino composed in TinyCad-OnBlock 2021
-// 2021-12-03 21:44:34 created.
+// 2021-12-04 07:20:38 created.
 // 11 FB-classes generated.
 // 15 FB-instances generated.
 // Unconnected FBs are ignored.
@@ -258,108 +258,108 @@ public:
 // FB Instances 
 // -----------------------------------------------------------------
 ESP32C3_core FB1(100);
-digital_in FB7(3);
-digital_in FB10(4);
-and2 FB9;
-digital_out FB8(19);
-ESP32_wifi_station FB3("OnNet", "00330033");
-print_value<bool> FB4("wifi connected = ");
-digital_out FB6(18);
-counter_en_clr FB13;
-print_value<int> FB11("counter = ");
-constant_1 FB12;
-constant_0 FB14;
-print_string FB15;
-constant_string FB16("\n");
-constant_1 FB5;
+digital_in FB6(3);
+digital_in FB9(4);
+and2 FB8;
+digital_out FB7(19);
+ESP32_wifi_station FB2("OnNet", "00330033");
+print_value<bool> FB3("wifi connected = ");
+digital_out FB5(18);
+counter_en_clr FB12;
+print_value<int> FB10("counter = ");
+constant_1 FB11;
+constant_0 FB13;
+print_string FB14;
+constant_string FB15("\n");
+constant_1 FB4;
 
 // -----------------------------------------------------------------
 // Calling Sequences 
 // -----------------------------------------------------------------
 void initFBs() {
-	FB12.init();
-	FB12.exec();
-	FB13.en = FB12.out;
-
-	FB14.init();
-	FB14.exec();
-	FB13.clr = FB14.out;
-
-	FB16.init();
-	FB16.exec();
-	FB15.str = FB16.out;
-
-	FB5.init();
-	FB5.exec();
-	FB3.connect = FB5.out;
-
-	FB1.init();
-
-	FB7.init();
-	FB7.exec();
-	FB9.a = FB7.out;
-
-	FB10.init();
-	FB10.exec();
-	FB9.b = FB10.out;
-
-	FB3.init();
-	FB3.exec();
-	FB6.in = FB3.connected;
-	FB4.value = FB3.connected;
+	FB11.init();
+	FB11.exec();
+	FB12.en = FB11.out;
 
 	FB13.init();
 	FB13.exec();
-	FB11.value = FB13.cnt;
-
-	FB9.init();
-	FB9.exec();
-	FB8.in = FB9.c;
-
-	FB8.init();
-	FB8.exec();
-
-	FB4.init();
-	FB4.exec();
-
-	FB6.init();
-	FB6.exec();
-
-	FB11.init();
-	FB11.exec();
+	FB12.clr = FB13.out;
 
 	FB15.init();
 	FB15.exec();
+	FB14.str = FB15.out;
+
+	FB4.init();
+	FB4.exec();
+	FB2.connect = FB4.out;
+
+	FB1.init();
+
+	FB6.init();
+	FB6.exec();
+	FB8.a = FB6.out;
+
+	FB9.init();
+	FB9.exec();
+	FB8.b = FB9.out;
+
+	FB2.init();
+	FB2.exec();
+	FB5.in = FB2.connected;
+	FB3.value = FB2.connected;
+
+	FB12.init();
+	FB12.exec();
+	FB10.value = FB12.cnt;
+
+	FB8.init();
+	FB8.exec();
+	FB7.in = FB8.c;
+
+	FB7.init();
+	FB7.exec();
+
+	FB3.init();
+	FB3.exec();
+
+	FB5.init();
+	FB5.exec();
+
+	FB10.init();
+	FB10.exec();
+
+	FB14.init();
+	FB14.exec();
 }
 
 void loopFBs() {
 	FB1.exec();
 
-	FB7.exec();
-	FB9.a = FB7.out;
-
-	FB10.exec();
-	FB9.b = FB10.out;
-
-	FB3.exec();
-	FB6.in = FB3.connected;
-	FB4.value = FB3.connected;
-
-	FB13.exec();
-	FB11.value = FB13.cnt;
+	FB6.exec();
+	FB8.a = FB6.out;
 
 	FB9.exec();
-	FB8.in = FB9.c;
+	FB8.b = FB9.out;
+
+	FB2.exec();
+	FB5.in = FB2.connected;
+	FB3.value = FB2.connected;
+
+	FB12.exec();
+	FB10.value = FB12.cnt;
 
 	FB8.exec();
+	FB7.in = FB8.c;
 
-	FB4.exec();
+	FB7.exec();
 
-	FB6.exec();
+	FB3.exec();
 
-	FB11.exec();
+	FB5.exec();
 
-	FB15.exec();
+	FB10.exec();
+
+	FB14.exec();
 }
 
 // -----------------------------------------------------------------

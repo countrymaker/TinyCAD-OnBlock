@@ -39,7 +39,7 @@ void loop() { idlecnt++; }
 			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
 			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
 		</part>
-		<part ref="FB7" name="digital_in">
+		<part ref="FB6" name="digital_in">
 			<attribute name="$$SPICE">void init() { pinMode(pin_num, INPUT); }
 
 void exec() { out = digitalRead(pin_num); }</attribute>
@@ -50,7 +50,7 @@ void exec() { out = digitalRead(pin_num); }</attribute>
 			<attribute name="Seq">1</attribute>
 			<attribute name="uint8_t pin_num">3</attribute>
 		</part>
-		<part ref="FB10" name="digital_in">
+		<part ref="FB9" name="digital_in">
 			<attribute name="$$SPICE">void init() { pinMode(pin_num, INPUT); }
 
 void exec() { out = digitalRead(pin_num); }</attribute>
@@ -61,7 +61,7 @@ void exec() { out = digitalRead(pin_num); }</attribute>
 			<attribute name="Seq">1</attribute>
 			<attribute name="uint8_t pin_num">4</attribute>
 		</part>
-		<part ref="FB9" name="and2">
+		<part ref="FB8" name="and2">
 			<attribute name="$$SPICE">void init() { c = false; }
 
 void exec() { c = a &amp;&amp; b; }</attribute>
@@ -71,7 +71,7 @@ void exec() { c = a &amp;&amp; b; }</attribute>
 			<attribute name="Type">bool</attribute>
 			<attribute name="Seq">2</attribute>
 		</part>
-		<part ref="FB8" name="digital_out">
+		<part ref="FB7" name="digital_out">
 			<attribute name="$$SPICE">void init() { pinMode(pin_num, OUTPUT); }
 
 void exec() { digitalWrite(pin_num, in); }</attribute>
@@ -82,7 +82,7 @@ void exec() { digitalWrite(pin_num, in); }</attribute>
 			<attribute name="Seq">3</attribute>
 			<attribute name="uint8_t pin_num">19</attribute>
 		</part>
-		<part ref="FB3" name="ESP32_wifi_station">
+		<part ref="FB2" name="ESP32_wifi_station">
 			<attribute name="$$SPICE">#include &lt;WiFi.h&gt;
 	void init() {
 		WiFi.mode(WIFI_STA);
@@ -108,7 +108,7 @@ void exec() { digitalWrite(pin_num, in); }</attribute>
 			<attribute name="string ssid">&quot;OnNet&quot;</attribute>
 			<attribute name="string pass">&quot;00330033&quot;</attribute>
 		</part>
-		<part ref="FB4" name="print_value">
+		<part ref="FB3" name="print_value">
 			<attribute name="$$SPICE">void init() {}
 
 void exec() {
@@ -123,7 +123,7 @@ void exec() {
 			<attribute name="Seq">3</attribute>
 			<attribute name="string key">&quot;wifi connected = &quot;</attribute>
 		</part>
-		<part ref="FB6" name="digital_out">
+		<part ref="FB5" name="digital_out">
 			<attribute name="$$SPICE">void init() { pinMode(pin_num, OUTPUT); }
 
 void exec() { digitalWrite(pin_num, in); }</attribute>
@@ -134,7 +134,7 @@ void exec() { digitalWrite(pin_num, in); }</attribute>
 			<attribute name="Seq">3</attribute>
 			<attribute name="uint8_t pin_num">18</attribute>
 		</part>
-		<part ref="FB13" name="counter_en_clr">
+		<part ref="FB12" name="counter_en_clr">
 			<attribute name="$$SPICE">void init() { cnt = {}; }
 
 void exec() {
@@ -148,7 +148,7 @@ void exec() {
 			<attribute name="Type">int</attribute>
 			<attribute name="Seq">1</attribute>
 		</part>
-		<part ref="FB11" name="print_value">
+		<part ref="FB10" name="print_value">
 			<attribute name="$$SPICE">void init() {}
 
 void exec() {
@@ -163,7 +163,7 @@ void exec() {
 			<attribute name="Seq">4</attribute>
 			<attribute name="string key">&quot;counter = &quot;</attribute>
 		</part>
-		<part ref="FB12" name="constant_1">
+		<part ref="FB11" name="constant_1">
 			<attribute name="$$SPICE">void init() {}
 
 void exec() { out = 1; }</attribute>
@@ -173,7 +173,7 @@ void exec() { out = 1; }</attribute>
 			<attribute name="Type">bool</attribute>
 			<attribute name="Seq">0</attribute>
 		</part>
-		<part ref="FB14" name="constant_0">
+		<part ref="FB13" name="constant_0">
 			<attribute name="$$SPICE">void init() {}
 
 void exec() { out = 0; }</attribute>
@@ -183,7 +183,7 @@ void exec() { out = 0; }</attribute>
 			<attribute name="Type">bool</attribute>
 			<attribute name="Seq">0</attribute>
 		</part>
-		<part ref="FB15" name="print_string">
+		<part ref="FB14" name="print_string">
 			<attribute name="$$SPICE">void init() {}
 
 void exec() {
@@ -196,7 +196,7 @@ void exec() {
 			<attribute name="Type">string</attribute>
 			<attribute name="Seq">5</attribute>
 		</part>
-		<part ref="FB16" name="constant_string">
+		<part ref="FB15" name="constant_string">
 			<attribute name="$$SPICE">void init() {}
 
 void exec() { out = val; }</attribute>
@@ -207,7 +207,7 @@ void exec() { out = val; }</attribute>
 			<attribute name="Seq">0</attribute>
 			<attribute name="string val">&quot;\n&quot;</attribute>
 		</part>
-		<part ref="FB5" name="constant_1">
+		<part ref="FB4" name="constant_1">
 			<attribute name="$$SPICE">void init() {}
 
 void exec() { out = 1; }</attribute>
@@ -226,41 +226,41 @@ void exec() { out = 1; }</attribute>
 			<pin part="FB1" name="int cpu" number="2" type="Output"/>
 		</net>
 		<net name="_N_3" number="3">
-			<pin part="FB7" name="bool out" number="1" type="Output"/>
-			<pin part="FB9" name="bool a" number="1" type="Input"/>
+			<pin part="FB6" name="bool out" number="1" type="Output"/>
+			<pin part="FB8" name="bool a" number="1" type="Input"/>
 		</net>
 		<net name="_N_4" number="4">
-			<pin part="FB10" name="bool out" number="1" type="Output"/>
-			<pin part="FB9" name="bool b" number="2" type="Input"/>
+			<pin part="FB9" name="bool out" number="1" type="Output"/>
+			<pin part="FB8" name="bool b" number="2" type="Input"/>
 		</net>
 		<net name="_N_5" number="5">
-			<pin part="FB9" name="bool c" number="3" type="Output"/>
-			<pin part="FB8" name="bool in" number="1" type="Input"/>
+			<pin part="FB8" name="bool c" number="3" type="Output"/>
+			<pin part="FB7" name="bool in" number="1" type="Input"/>
 		</net>
 		<net name="_N_6" number="6">
-			<pin part="FB3" name="bool connected" number="2" type="Output"/>
-			<pin part="FB6" name="bool in" number="1" type="Input"/>
-			<pin part="FB4" name="T value" number="1" type="Input"/>
+			<pin part="FB2" name="bool connected" number="2" type="Output"/>
+			<pin part="FB5" name="bool in" number="1" type="Input"/>
+			<pin part="FB3" name="T value" number="1" type="Input"/>
 		</net>
 		<net name="_N_7" number="7">
-			<pin part="FB3" name="bool connect" number="1" type="Input"/>
-			<pin part="FB5" name="bool out" number="1" type="Output"/>
+			<pin part="FB2" name="bool connect" number="1" type="Input"/>
+			<pin part="FB4" name="bool out" number="1" type="Output"/>
 		</net>
 		<net name="_N_8" number="8">
-			<pin part="FB13" name="bool en" number="1" type="Input"/>
-			<pin part="FB12" name="bool out" number="1" type="Output"/>
+			<pin part="FB12" name="bool en" number="1" type="Input"/>
+			<pin part="FB11" name="bool out" number="1" type="Output"/>
 		</net>
 		<net name="_N_9" number="9">
-			<pin part="FB13" name="T cnt" number="3" type="Output"/>
-			<pin part="FB11" name="T value" number="1" type="Input"/>
+			<pin part="FB12" name="T cnt" number="3" type="Output"/>
+			<pin part="FB10" name="T value" number="1" type="Input"/>
 		</net>
 		<net name="_N_10" number="10">
-			<pin part="FB13" name="bool clr" number="2" type="Input"/>
-			<pin part="FB14" name="bool out" number="1" type="Output"/>
+			<pin part="FB12" name="bool clr" number="2" type="Input"/>
+			<pin part="FB13" name="bool out" number="1" type="Output"/>
 		</net>
 		<net name="_N_11" number="11">
-			<pin part="FB15" name="string str" number="1" type="Input"/>
-			<pin part="FB16" name="string out" number="1" type="Output"/>
+			<pin part="FB14" name="string str" number="1" type="Input"/>
+			<pin part="FB15" name="string out" number="1" type="Output"/>
 		</net>
 	</nets>
 </netlist>

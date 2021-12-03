@@ -73,7 +73,7 @@ BOOL CDlgPCBExport::OnInitDialog()
 	m_Filetype.AddString(_T("gEDA PCB"));
 	m_Filetype.AddString(_T("XML"));
 	m_Filetype.AddString(_T("KiCad")); // cmaker
-	m_Filetype.AddString(_T("Onblock")); // cmaker
+	m_Filetype.AddString(_T("OnBlock")); // cmaker
 
 	m_Filetype.SetCurSel(m_type);
 

@@ -89,12 +89,12 @@ download the executable.-->
 			<CHARSET>0</CHARSET>
 			<FACENAME>Calibri</FACENAME>
 		</FONT>
-		<STYLE id='3'>
+		<STYLE id='4'>
 			<STYLE>0</STYLE>
 			<COLOR>000000</COLOR>
 			<THICKNESS>1</THICKNESS>
 		</STYLE>
-		<STYLE id='4'>
+		<STYLE id='5'>
 			<STYLE>5</STYLE>
 			<COLOR>000000</COLOR>
 			<THICKNESS>1</THICKNESS>
@@ -121,101 +121,6 @@ download the executable.-->
 			<COLOR>FFFFFF</COLOR>
 		</FILL>
 		<SYMBOLDEF id='1'>
-			<NAME type='1'>ESP32C3_core</NAME>
-			<REF type='0'>FB?</REF>
-			<DESCRIPTION></DESCRIPTION>
-			<PPP>1</PPP>
-			<GUID></GUID>
-			<FIELD>
-				<NAME>$$SPICE</NAME>
-				<DEFAULT>#include &lt;string&gt;
-uint32_t cycle = 0, idlecnt = 0, idlecnt_max = 1;
-
-void init() {
-	Serial.begin(115200);
-	delay(500);
-	Serial.println();
-	Serial.print(DSN_NAME); Serial.println(&quot; started...&quot;);
-}
-
-TimerHandle_t htimer;
-void static fTimer(TimerHandle_t htimer) { loopFBs(); }
-
-void start() {
-	htimer = xTimerCreate(&quot;fTimer&quot;, cycletime, pdTRUE, (void*)0, &amp;fTimer);
-	xTimerStart(htimer, 100);
-}
-
-void exec() {
-	if (cycle == 0) idlecnt_max = idlecnt;
-
-	cpu = 100 - 100 * idlecnt / idlecnt_max;
-	cyclecnt = ++cycle;
-	idlecnt = 0;
-}
-
-void loop() { idlecnt++; }
-</DEFAULT>
-				<FT>000002</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<FIELD>
-				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
-				<DEFAULT>5</DEFAULT>
-				<FT>000002</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<FIELD>
-				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
-				<DEFAULT>5</DEFAULT>
-				<FT>000002</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<FIELD>
-				<NAME>Package</NAME>
-				<DEFAULT>core</DEFAULT>
-				<FT>000001</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<FIELD>
-				<NAME>Type</NAME>
-				<DEFAULT>void</DEFAULT>
-				<FT>000001</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<FIELD>
-				<NAME>Seq</NAME>
-				<DEFAULT>1</DEFAULT>
-				<FT>000000</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<FIELD>
-				<NAME>uint32_t cycletime</NAME>
-				<DEFAULT>1000</DEFAULT>
-				<FT>000000</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<REF_POINT power='0' part='0' pos='52.00000,28.00000'/>
-			<TinyCAD>
-				<RECTANGLE a='25.00000,13.00000' b='48.00000,21.00000' style='3' fill='2'/>
-				<RECTANGLE a='25.00000,13.00000' b='48.00000,28.00000' style='3' fill='0'/>
-				<PIN pos='52.00000,23.00000' which='0' elec='1' direction='2' part='0' number='1' show='0' length='20' number_pos='0' centre_name='0'>uint32_t cyclecnt</PIN>
-				<RECTANGLE a='25.00000,13.00000' b='48.00000,17.00000' style='3' fill='3'/>
-				<TEXT pos='30.00000,16.50000' direction='3' font='5' color='000000'>ESP32C3_core</TEXT>
-				<TEXT pos='27.00000,20.00000' direction='3' font='4' color='FF0000'>cycle time[ms]:</TEXT>
-				<TEXT pos='37.00000,24.00000' direction='3' font='3' color='FF0000'>cycle count</TEXT>
-				<PIN pos='52.00000,26.00000' which='0' elec='1' direction='2' part='0' number='2' show='0' length='20' number_pos='0' centre_name='0'>uint8_t cpu</PIN>
-				<TEXT pos='41.00000,27.00000' direction='3' font='3' color='FF0000'>cpu(%)</TEXT>
-			</TinyCAD>
-		</SYMBOLDEF>
-		<SYMBOLDEF id='2'>
 			<NAME type='1'>print_value</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -278,16 +183,16 @@ void exec() {
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='43.00000,26.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='25.00000,13.00000' b='43.00000,21.00000' style='3' fill='2'/>
-				<RECTANGLE a='25.00000,13.00000' b='43.00000,26.00000' style='3' fill='0'/>
-				<RECTANGLE a='25.00000,13.00000' b='43.00000,17.00000' style='3' fill='3'/>
+				<RECTANGLE a='25.00000,13.00000' b='43.00000,21.00000' style='4' fill='2'/>
+				<RECTANGLE a='25.00000,13.00000' b='43.00000,26.00000' style='4' fill='0'/>
+				<RECTANGLE a='25.00000,13.00000' b='43.00000,17.00000' style='4' fill='3'/>
 				<TEXT pos='29.00000,16.50000' direction='3' font='5' color='000000'>print_value</TEXT>
 				<PIN pos='21.00000,24.00000' which='0' elec='0' direction='3' part='0' number='1' show='0' length='20' number_pos='0' centre_name='0'>T value</PIN>
 				<TEXT pos='26.00000,25.00000' direction='3' font='3' color='FF0000'>value</TEXT>
 				<TEXT pos='26.00000,20.00000' direction='3' font='3' color='000000'>key:</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='3'>
+		<SYMBOLDEF id='2'>
 			<NAME type='1'>digital_in</NAME>
 			<REF type='0'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -346,14 +251,14 @@ void exec() { out = digitalRead(pin_num); }</DEFAULT>
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='36.00000,25.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='24.00000,21.00000' b='34.00000,25.00000' style='3' fill='2'/>
+				<RECTANGLE a='24.00000,21.00000' b='34.00000,25.00000' style='4' fill='2'/>
 				<PIN pos='36.00000,23.00000' which='0' elec='1' direction='2' part='0' number='1' show='0' length='10' number_pos='0' centre_name='0'>bool out</PIN>
 				<TEXT pos='27.00000,24.00000' direction='3' font='3' color='008000'>pin:</TEXT>
-				<RECTANGLE a='24.00000,21.00000' b='26.00000,25.00000' style='3' fill='3'/>
+				<RECTANGLE a='24.00000,21.00000' b='26.00000,25.00000' style='4' fill='3'/>
 				<TEXT pos='24.50000,24.50000' direction='3' font='6' color='000000'>&gt;</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='4'>
+		<SYMBOLDEF id='3'>
 			<NAME type='1'>and2</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -405,27 +310,27 @@ void exec() { c = a &amp;&amp; b; }</DEFAULT>
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='63.00000,57.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='57.00000,52.00000' b='61.00000,56.00000' style='4' fill='4'/>
+				<RECTANGLE a='57.00000,52.00000' b='61.00000,56.00000' style='5' fill='4'/>
 				<PIN pos='55.00000,53.00000' which='0' elec='0' direction='3' part='0' number='1' show='0' length='10' number_pos='0' centre_name='0'>bool a</PIN>
 				<PIN pos='63.00000,54.00000' which='0' elec='1' direction='2' part='0' number='3' show='0' length='10' number_pos='0' centre_name='0'>bool c</PIN>
 				<PIN pos='55.00000,55.00000' which='0' elec='0' direction='3' part='0' number='2' show='0' length='10' number_pos='0' centre_name='0'>bool b</PIN>
-				<POLYGON pos='57.00000,52.00000' style='3' fill='0' polygon='0'>
+				<POLYGON pos='57.00000,52.00000' style='4' fill='0' polygon='0'>
 					<POINT pos='2.00000,0.00000' arc='0'/>
 					<POINT pos='0.00000,0.00000' arc='0'/>
 					<POINT pos='0.00000,4.00000' arc='0'/>
 					<POINT pos='2.00000,4.00000' arc='0'/>
 				</POLYGON>
-				<POLYGON pos='59.00000,52.00000' style='3' fill='0' polygon='0'>
+				<POLYGON pos='59.00000,52.00000' style='4' fill='0' polygon='0'>
 					<POINT pos='2.00000,2.00000' arc='0'/>
 					<POINT pos='0.00000,0.00000' arc='2'/>
 				</POLYGON>
-				<POLYGON pos='59.00000,54.00000' style='3' fill='0' polygon='0'>
+				<POLYGON pos='59.00000,54.00000' style='4' fill='0' polygon='0'>
 					<POINT pos='0.00000,2.00000' arc='0'/>
 					<POINT pos='2.00000,0.00000' arc='1'/>
 				</POLYGON>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='5'>
+		<SYMBOLDEF id='4'>
 			<NAME type='1'>digital_out</NAME>
 			<REF type='0'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -484,14 +389,14 @@ void exec() { digitalWrite(pin_num, in); }</DEFAULT>
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='34.00000,25.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='24.00000,21.00000' b='34.00000,25.00000' style='3' fill='2'/>
+				<RECTANGLE a='24.00000,21.00000' b='34.00000,25.00000' style='4' fill='2'/>
 				<PIN pos='22.00000,23.00000' which='0' elec='0' direction='3' part='0' number='1' show='0' length='10' number_pos='0' centre_name='0'>bool in</PIN>
 				<TEXT pos='25.00000,24.00000' direction='3' font='3' color='008000'>pin:</TEXT>
-				<RECTANGLE a='32.00000,21.00000' b='34.00000,25.00000' style='3' fill='3'/>
+				<RECTANGLE a='32.00000,21.00000' b='34.00000,25.00000' style='4' fill='3'/>
 				<TEXT pos='32.50000,24.50000' direction='3' font='6' color='000000'>&gt;</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='6'>
+		<SYMBOLDEF id='5'>
 			<NAME type='1'>ESP32_wifi_station</NAME>
 			<REF type='0'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -577,15 +482,15 @@ void exec() { digitalWrite(pin_num, in); }</DEFAULT>
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='52.00000,31.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='25.00000,13.00000' b='48.00000,24.00000' style='3' fill='2'/>
-				<RECTANGLE a='25.00000,13.00000' b='48.00000,31.00000' style='3' fill='0'/>
+				<RECTANGLE a='25.00000,13.00000' b='48.00000,24.00000' style='4' fill='2'/>
+				<RECTANGLE a='25.00000,13.00000' b='48.00000,31.00000' style='4' fill='0'/>
 				<PIN pos='52.00000,26.00000' which='0' elec='1' direction='2' part='0' number='2' show='0' length='20' number_pos='0' centre_name='0'>bool connected</PIN>
-				<RECTANGLE a='25.00000,13.00000' b='48.00000,17.00000' style='3' fill='3'/>
+				<RECTANGLE a='25.00000,13.00000' b='48.00000,17.00000' style='4' fill='3'/>
 				<TEXT pos='28.00000,16.50000' direction='3' font='5' color='000000'>ESP32_wifi_station</TEXT>
 				<TEXT pos='26.00000,20.00000' direction='3' font='4' color='000000'>ssid:</TEXT>
 				<TEXT pos='37.00000,27.00000' direction='3' font='3' color='008000'>connected</TEXT>
 				<TEXT pos='26.00000,23.00000' direction='3' font='4' color='000000'>pass:</TEXT>
-				<POLYGON pos='41.00000,11.00000' style='3' fill='0' polygon='0'>
+				<POLYGON pos='41.00000,11.00000' style='4' fill='0' polygon='0'>
 					<POINT pos='1.00000,2.00000' arc='0'/>
 					<POINT pos='1.00000,0.00000' arc='0'/>
 					<POINT pos='0.00000,0.00000' arc='0'/>
@@ -597,7 +502,7 @@ void exec() { digitalWrite(pin_num, in); }</DEFAULT>
 				<TEXT pos='26.00000,27.00000' direction='3' font='3' color='008000'>connect</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='7'>
+		<SYMBOLDEF id='6'>
 			<NAME type='1'>constant_1</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -660,7 +565,7 @@ void exec() { out = 1; }</DEFAULT>
 				<TEXT pos='30.50000,24.00000' direction='3' font='7' color='000000'>1</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='8'>
+		<SYMBOLDEF id='7'>
 			<NAME type='1'>counter_en_clr</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -722,10 +627,10 @@ void exec() {
 				<TEXT pos='57.25000,53.75000' direction='3' font='3' color='008000'>en</TEXT>
 				<TEXT pos='57.25000,56.75000' direction='3' font='4' color='008000'>clr</TEXT>
 				<TEXT pos='62.50000,53.75000' direction='3' font='8' color='000000'>cnt</TEXT>
-				<RECTANGLE a='57.00000,51.00000' b='66.00000,57.00000' style='3' fill='0'/>
+				<RECTANGLE a='57.00000,51.00000' b='66.00000,57.00000' style='4' fill='0'/>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='9'>
+		<SYMBOLDEF id='8'>
 			<NAME type='1'>constant_0</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -788,7 +693,7 @@ void exec() { out = 0; }</DEFAULT>
 				<TEXT pos='30.50000,24.00000' direction='3' font='7' color='000000'>0</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='10'>
+		<SYMBOLDEF id='9'>
 			<NAME type='1'>print_string</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -843,14 +748,14 @@ void exec() {
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='40.00000,22.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='25.00000,13.00000' b='40.00000,22.00000' style='3' fill='0'/>
-				<RECTANGLE a='25.00000,13.00000' b='40.00000,17.00000' style='3' fill='3'/>
+				<RECTANGLE a='25.00000,13.00000' b='40.00000,22.00000' style='4' fill='0'/>
+				<RECTANGLE a='25.00000,13.00000' b='40.00000,17.00000' style='4' fill='3'/>
 				<TEXT pos='27.00000,16.50000' direction='3' font='5' color='000000'>print_string</TEXT>
 				<PIN pos='21.00000,20.00000' which='0' elec='0' direction='3' part='0' number='1' show='0' length='20' number_pos='0' centre_name='0'>string str</PIN>
 				<TEXT pos='26.00000,21.00000' direction='3' font='3' color='000000'>string</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='11'>
+		<SYMBOLDEF id='10'>
 			<NAME type='1'>constant_string</NAME>
 			<REF type='1'>FB?</REF>
 			<DESCRIPTION></DESCRIPTION>
@@ -919,6 +824,172 @@ void exec() { out = val; }</DEFAULT>
 				</POLYGON>
 			</TinyCAD>
 		</SYMBOLDEF>
+		<SYMBOLDEF id='11'>
+			<NAME type='1'>ESP32C3_core</NAME>
+			<REF type='0'>FB?</REF>
+			<DESCRIPTION></DESCRIPTION>
+			<PPP>1</PPP>
+			<GUID></GUID>
+			<FIELD>
+				<NAME>$$SPICE</NAME>
+				<DEFAULT>#include &lt;string&gt;
+uint32_t cycle = 0, idlecnt = 0, idlecnt_max = 1;
+
+void init() {
+	Serial.begin(115200);
+	delay(500);
+	Serial.println();
+	Serial.print(DSN_NAME); Serial.println(&quot; started...&quot;);
+}
+
+TimerHandle_t htimer;
+void static fTimer(TimerHandle_t htimer) { loopFBs(); }
+
+void start() {
+	htimer = xTimerCreate(&quot;fTimer&quot;, cycletime, pdTRUE, (void*)0, &amp;fTimer);
+	xTimerStart(htimer, 100);
+}
+
+void exec() {
+	if (cycle == 0) idlecnt_max = idlecnt;
+
+	cpu = 100 - 100 * idlecnt / idlecnt_max;
+	if(cpu &lt; 0) cpu = 0;
+
+	cyclecnt = ++cycle;
+	idlecnt = 0;
+}
+
+void loop() { idlecnt++; }
+</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>core</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Type</NAME>
+				<DEFAULT>void</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Seq</NAME>
+				<DEFAULT>1</DEFAULT>
+				<FT>000000</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>uint32_t cycletime</NAME>
+				<DEFAULT>1000</DEFAULT>
+				<FT>000000</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='52.00000,28.00000'/>
+			<TinyCAD>
+				<RECTANGLE a='25.00000,13.00000' b='48.00000,21.00000' style='4' fill='2'/>
+				<RECTANGLE a='25.00000,13.00000' b='48.00000,28.00000' style='4' fill='0'/>
+				<PIN pos='52.00000,23.00000' which='0' elec='1' direction='2' part='0' number='1' show='0' length='20' number_pos='0' centre_name='0'>uint32_t cyclecnt</PIN>
+				<RECTANGLE a='25.00000,13.00000' b='48.00000,17.00000' style='4' fill='3'/>
+				<TEXT pos='30.00000,16.50000' direction='3' font='5' color='000000'>ESP32C3_core</TEXT>
+				<TEXT pos='27.00000,20.00000' direction='3' font='4' color='FF0000'>cycle time[ms]:</TEXT>
+				<TEXT pos='37.00000,24.00000' direction='3' font='3' color='FF0000'>cycle count</TEXT>
+				<PIN pos='52.00000,26.00000' which='0' elec='1' direction='2' part='0' number='2' show='0' length='20' number_pos='0' centre_name='0'>int cpu</PIN>
+				<TEXT pos='41.00000,27.00000' direction='3' font='3' color='FF0000'>cpu(%)</TEXT>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='12'>
+			<NAME type='0'>ESP-C3-13</NAME>
+			<REF type='0'>U?</REF>
+			<DESCRIPTION>ESP32C3 module</DESCRIPTION>
+			<PPP>1</PPP>
+			<GUID></GUID>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>FP_ESP-C3-13</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='67.00000,53.00000'/>
+			<TinyCAD>
+				<RECTANGLE a='45.00000,29.00000' b='63.00000,53.00000' style='4' fill='0'/>
+				<PIN pos='41.00000,35.00000' which='0' elec='0' direction='3' part='0' number='1' show='3' length='20' number_pos='0' centre_name='0'>3V3</PIN>
+				<PIN pos='41.00000,37.00000' which='0' elec='0' direction='3' part='0' number='2' show='3' length='20' number_pos='0' centre_name='0'>EN</PIN>
+				<PIN pos='41.00000,39.00000' which='0' elec='0' direction='3' part='0' number='3' show='3' length='20' number_pos='0' centre_name='0'>IO4</PIN>
+				<PIN pos='41.00000,41.00000' which='0' elec='0' direction='3' part='0' number='4' show='3' length='20' number_pos='0' centre_name='0'>IO5</PIN>
+				<PIN pos='41.00000,43.00000' which='0' elec='0' direction='3' part='0' number='5' show='3' length='20' number_pos='0' centre_name='0'>IO6</PIN>
+				<PIN pos='41.00000,45.00000' which='0' elec='0' direction='3' part='0' number='6' show='3' length='20' number_pos='0' centre_name='0'>IO7</PIN>
+				<PIN pos='41.00000,47.00000' which='0' elec='0' direction='3' part='0' number='7' show='3' length='20' number_pos='0' centre_name='0'>IO8</PIN>
+				<PIN pos='41.00000,49.00000' which='0' elec='0' direction='3' part='0' number='8' show='3' length='20' number_pos='0' centre_name='0'>IO9</PIN>
+				<PIN pos='67.00000,49.00000' which='0' elec='0' direction='2' part='0' number='11' show='3' length='20' number_pos='0' centre_name='0'>RX0</PIN>
+				<PIN pos='67.00000,47.00000' which='0' elec='0' direction='2' part='0' number='12' show='3' length='20' number_pos='0' centre_name='0'>TX0</PIN>
+				<PIN pos='67.00000,45.00000' which='0' elec='0' direction='2' part='0' number='13' show='3' length='20' number_pos='0' centre_name='0'>IO18</PIN>
+				<PIN pos='67.00000,43.00000' which='0' elec='0' direction='2' part='0' number='14' show='3' length='20' number_pos='0' centre_name='0'>IO19</PIN>
+				<PIN pos='67.00000,41.00000' which='0' elec='0' direction='2' part='0' number='15' show='3' length='20' number_pos='0' centre_name='0'>IO3</PIN>
+				<PIN pos='67.00000,39.00000' which='0' elec='0' direction='2' part='0' number='16' show='3' length='20' number_pos='0' centre_name='0'>IO2</PIN>
+				<PIN pos='67.00000,37.00000' which='0' elec='0' direction='2' part='0' number='17' show='3' length='20' number_pos='0' centre_name='0'>IO1</PIN>
+				<PIN pos='67.00000,35.00000' which='0' elec='0' direction='2' part='0' number='18' show='3' length='20' number_pos='0' centre_name='0'>IO0</PIN>
+				<PIN pos='41.00000,51.00000' which='0' elec='0' direction='3' part='0' number='9' show='3' length='20' number_pos='0' centre_name='0'>GND</PIN>
+				<PIN pos='67.00000,51.00000' which='0' elec='0' direction='2' part='0' number='10' show='3' length='20' number_pos='0' centre_name='0'>IO10</PIN>
+				<POLYGON pos='58.00000,30.00000' style='4' fill='0' polygon='0'>
+					<POINT pos='2.00000,3.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='47.00000,30.00000' style='4' fill='0' polygon='0'>
+					<POINT pos='11.00000,0.00000' arc='0'/>
+					<POINT pos='8.00000,0.00000' arc='0'/>
+					<POINT pos='8.00000,2.00000' arc='0'/>
+					<POINT pos='6.00000,2.00000' arc='0'/>
+					<POINT pos='6.00000,0.00000' arc='0'/>
+					<POINT pos='4.00000,0.00000' arc='0'/>
+					<POINT pos='4.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,3.00000' arc='0'/>
+				</POLYGON>
+			</TinyCAD>
+		</SYMBOLDEF>
 		<OPTIONS>
 			<GRID>1</GRID>
 			<UNITS>0</UNITS>
@@ -935,9 +1006,13 @@ void exec() { out = val; }</DEFAULT>
 			<COLOR_NOTETEXT_LINE>FF0000</COLOR_NOTETEXT_LINE>
 			<COLOR_NOTETEXT_TEXT>FF0000</COLOR_NOTETEXT_TEXT>
 		</OPTIONS>
-		<SYMBOL id='1' pos='46.00000,29.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='11' pos='46.00000,29.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='0' description='Ref' value='FB1' show='1' pos='-27.00000,-15.00000'/>
 			<FIELD type='1' description='Name' value='ESP32C3_core' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='core' show='0' pos='0.00000,-7.00000'/>
+			<FIELD type='1' description='Type' value='void' show='0' pos='0.00000,-5.00000'/>
+			<FIELD type='0' description='Seq' value='1' show='1' pos='-5.00000,-15.00000'/>
+			<FIELD type='0' description='uint32_t cycletime' value='100' show='1' pos='-10.00000,-8.00000'/>
 			<FIELD type='2' description='$$SPICE' value='#include &lt;string&gt;
 uint32_t cycle = 0, idlecnt = 0, idlecnt_max = 1;
 
@@ -960,6 +1035,8 @@ void exec() {
 	if (cycle == 0) idlecnt_max = idlecnt;
 
 	cpu = 100 - 100 * idlecnt / idlecnt_max;
+	if(cpu &lt; 0) cpu = 0;
+
 	cyclecnt = ++cycle;
 	idlecnt = 0;
 }
@@ -968,33 +1045,11 @@ void loop() { idlecnt++; }
 ' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
-			<FIELD type='1' description='Package' value='core' show='0' pos='0.00000,-7.00000'/>
-			<FIELD type='1' description='Type' value='void' show='0' pos='0.00000,-5.00000'/>
-			<FIELD type='0' description='Seq' value='1' show='1' pos='-5.00000,-15.00000'/>
-			<FIELD type='0' description='uint32_t cycletime' value='100' show='1' pos='-10.00000,-8.00000'/>
 			<HINT pin='1' net='1'/>
 			<HINT pin='2' net='2'/>
 		</SYMBOL>
-		<SYMBOL id='2' pos='158.00000,29.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB2' show='0' pos='-18.00000,-13.00000'/>
-			<FIELD type='1' description='Name' value='print_value' show='0' pos='0.00000,0.00000'/>
-			<FIELD type='2' description='$$SPICE' value='void init() {}
-
-void exec() {
-	String s = key.c_str() + String(value);
-	Serial.println(s);
-}
-' show='0' pos='0.00000,0.00000'/>
-			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
-			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
-			<FIELD type='1' description='Package' value='peri' show='0' pos='0.00000,-5.00000'/>
-			<FIELD type='1' description='Type' value='uint8_t' show='0' pos='0.00000,-3.00000'/>
-			<FIELD type='0' description='Seq' value='2' show='1' pos='-1.00000,-13.00000'/>
-			<FIELD type='0' description='string key' value='&quot;cpu(%) = &quot;' show='1' pos='-12.00000,-6.00000'/>
-			<HINT pin='1' net='2'/>
-		</SYMBOL>
-		<SYMBOL id='3' pos='31.00000,70.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='0' description='Ref' value='FB7' show='0' pos='-12.00000,-4.00000'/>
+		<SYMBOL id='2' pos='31.00000,70.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='FB6' show='0' pos='-12.00000,-4.00000'/>
 			<FIELD type='1' description='Name' value='digital_in' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { pinMode(pin_num, INPUT); }
 
@@ -1007,8 +1062,8 @@ void exec() { out = digitalRead(pin_num); }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='0' description='uint8_t pin_num' value='3' show='1' pos='-5.00000,-1.00000'/>
 			<HINT pin='1' net='3'/>
 		</SYMBOL>
-		<SYMBOL id='3' pos='31.00000,78.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='0' description='Ref' value='FB10' show='0' pos='-12.00000,-4.00000'/>
+		<SYMBOL id='2' pos='31.00000,78.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='FB9' show='0' pos='-12.00000,-4.00000'/>
 			<FIELD type='1' description='Name' value='digital_in' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { pinMode(pin_num, INPUT); }
 
@@ -1021,8 +1076,8 @@ void exec() { out = digitalRead(pin_num); }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='0' description='uint8_t pin_num' value='4' show='1' pos='-5.00000,-1.00000'/>
 			<HINT pin='1' net='4'/>
 		</SYMBOL>
-		<SYMBOL id='4' pos='52.00000,72.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB9' show='0' pos='0.00000,-1.00000'/>
+		<SYMBOL id='3' pos='52.00000,72.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='FB8' show='0' pos='0.00000,-1.00000'/>
 			<FIELD type='1' description='Name' value='and2' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { c = false; }
 
@@ -1036,8 +1091,8 @@ void exec() { c = a &amp;&amp; b; }' show='0' pos='0.00000,0.00000'/>
 			<HINT pin='2' net='4'/>
 			<HINT pin='3' net='5'/>
 		</SYMBOL>
-		<SYMBOL id='5' pos='158.00000,71.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='0' description='Ref' value='FB8' show='0' pos='-10.00000,-4.00000'/>
+		<SYMBOL id='4' pos='158.00000,71.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='FB7' show='0' pos='-10.00000,-4.00000'/>
 			<FIELD type='1' description='Name' value='digital_out' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { pinMode(pin_num, OUTPUT); }
 
@@ -1050,15 +1105,14 @@ void exec() { digitalWrite(pin_num, in); }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='0' description='uint8_t pin_num' value='19' show='1' pos='-5.00000,-1.00000'/>
 			<HINT pin='1' net='5'/>
 		</SYMBOL>
-		<WIRE a='46.00000,27.00000' b='136.00000,27.00000'/>
 		<WIRE a='31.00000,68.00000' b='44.00000,68.00000'/>
 		<WIRE a='31.00000,76.00000' b='37.00000,76.00000'/>
 		<WIRE a='37.00000,76.00000' b='37.00000,70.00000'/>
 		<WIRE a='37.00000,70.00000' b='44.00000,70.00000'/>
 		<WIRE a='52.00000,69.00000' b='146.00000,69.00000'/>
 		<NOCONNECT pos='46.00000,24.00000'/>
-		<SYMBOL id='6' pos='46.00000,56.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='0' description='Ref' value='FB3' show='1' pos='-27.00000,-18.00000'/>
+		<SYMBOL id='5' pos='46.00000,56.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='FB2' show='1' pos='-27.00000,-18.00000'/>
 			<FIELD type='1' description='Name' value='ESP32_wifi_station' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='#include &lt;WiFi.h&gt;
 	void init() {
@@ -1087,8 +1141,8 @@ void exec() { digitalWrite(pin_num, in); }' show='0' pos='0.00000,0.00000'/>
 			<HINT pin='1' net='7'/>
 			<HINT pin='2' net='6'/>
 		</SYMBOL>
-		<SYMBOL id='2' pos='158.00000,53.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB4' show='0' pos='-18.00000,-13.00000'/>
+		<SYMBOL id='1' pos='158.00000,53.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='FB3' show='0' pos='-18.00000,-13.00000'/>
 			<FIELD type='1' description='Name' value='print_value' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
 
@@ -1106,8 +1160,8 @@ void exec() {
 			<HINT pin='1' net='6'/>
 		</SYMBOL>
 		<WIRE a='131.00000,51.00000' b='136.00000,51.00000'/>
-		<SYMBOL id='5' pos='158.00000,63.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='0' description='Ref' value='FB6' show='0' pos='-10.00000,-4.00000'/>
+		<SYMBOL id='4' pos='158.00000,63.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='FB5' show='0' pos='-10.00000,-4.00000'/>
 			<FIELD type='1' description='Name' value='digital_out' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { pinMode(pin_num, OUTPUT); }
 
@@ -1124,8 +1178,8 @@ void exec() { digitalWrite(pin_num, in); }' show='0' pos='0.00000,0.00000'/>
 		<WIRE a='131.00000,61.00000' b='131.00000,51.00000'/>
 		<WIRE a='46.00000,51.00000' b='131.00000,51.00000'/>
 		<JUNCTION pos='131.00000,51.00000'/>
-		<SYMBOL id='8' pos='30.00000,91.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB13' show='0' pos='0.00000,-4.00000'/>
+		<SYMBOL id='7' pos='30.00000,91.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='FB12' show='0' pos='0.00000,-4.00000'/>
 			<FIELD type='1' description='Name' value='counter_en_clr' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { cnt = {}; }
 
@@ -1143,8 +1197,8 @@ void exec() {
 			<HINT pin='2' net='10'/>
 			<HINT pin='3' net='9'/>
 		</SYMBOL>
-		<SYMBOL id='2' pos='158.00000,88.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB11' show='0' pos='-18.00000,-13.00000'/>
+		<SYMBOL id='1' pos='158.00000,88.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='FB10' show='0' pos='-18.00000,-13.00000'/>
 			<FIELD type='1' description='Name' value='print_value' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
 
@@ -1162,8 +1216,8 @@ void exec() {
 			<HINT pin='1' net='9'/>
 		</SYMBOL>
 		<WIRE a='30.00000,86.00000' b='136.00000,86.00000'/>
-		<SYMBOL id='7' pos='17.00000,88.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB12' show='0' pos='0.00000,-3.00000'/>
+		<SYMBOL id='6' pos='17.00000,88.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='FB11' show='0' pos='0.00000,-3.00000'/>
 			<FIELD type='1' description='Name' value='constant_1' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
 
@@ -1175,8 +1229,8 @@ void exec() { out = 1; }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Seq' value='0' show='0' pos='0.00000,3.00000'/>
 			<HINT pin='1' net='8'/>
 		</SYMBOL>
-		<SYMBOL id='9' pos='17.00000,91.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB14' show='0' pos='0.00000,-3.00000'/>
+		<SYMBOL id='8' pos='17.00000,91.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='FB13' show='0' pos='0.00000,-3.00000'/>
 			<FIELD type='1' description='Name' value='constant_0' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
 
@@ -1188,8 +1242,8 @@ void exec() { out = 0; }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Seq' value='0' show='0' pos='0.00000,3.00000'/>
 			<HINT pin='1' net='10'/>
 		</SYMBOL>
-		<SYMBOL id='10' pos='158.00000,102.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB15' show='0' pos='0.00000,-5.00000'/>
+		<SYMBOL id='9' pos='158.00000,102.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='FB14' show='0' pos='0.00000,-5.00000'/>
 			<FIELD type='1' description='Name' value='print_string' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
 
@@ -1204,8 +1258,8 @@ void exec() {
 			<FIELD type='0' description='Seq' value='5' show='1' pos='-1.00000,-9.00000'/>
 			<HINT pin='1' net='11'/>
 		</SYMBOL>
-		<SYMBOL id='11' pos='139.00000,102.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB16' show='0' pos='0.00000,0.00000'/>
+		<SYMBOL id='10' pos='139.00000,102.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='FB15' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Name' value='constant_string' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
 
@@ -1218,8 +1272,8 @@ void exec() { out = val; }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='0' description='string val' value='&quot;\n&quot;' show='1' pos='-8.00000,-2.00000'/>
 			<HINT pin='1' net='11'/>
 		</SYMBOL>
-		<SYMBOL id='7' pos='15.00000,53.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB5' show='0' pos='0.00000,-3.00000'/>
+		<SYMBOL id='6' pos='15.00000,53.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='FB4' show='0' pos='0.00000,-3.00000'/>
 			<FIELD type='1' description='Name' value='constant_1' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
 
@@ -1230,6 +1284,32 @@ void exec() { out = 1; }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Type' value='bool' show='0' pos='0.00000,1.00000'/>
 			<FIELD type='1' description='Seq' value='0' show='0' pos='0.00000,3.00000'/>
 			<HINT pin='1' net='7'/>
+		</SYMBOL>
+		<NOCONNECT pos='46.00000,27.00000'/>
+		<SYMBOL id='12' pos='98.00000,41.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='U1' show='1' pos='-22.00000,-24.00000'/>
+			<FIELD type='0' description='Name' value='ESP-C3-13' show='1' pos='-12.00000,2.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='FP_ESP-C3-13' show='0' pos='0.00000,-18.00000'/>
+			<HINT pin='1' net='12'/>
+			<HINT pin='10' net='29'/>
+			<HINT pin='11' net='20'/>
+			<HINT pin='12' net='21'/>
+			<HINT pin='13' net='22'/>
+			<HINT pin='14' net='23'/>
+			<HINT pin='15' net='24'/>
+			<HINT pin='16' net='25'/>
+			<HINT pin='17' net='26'/>
+			<HINT pin='18' net='27'/>
+			<HINT pin='2' net='13'/>
+			<HINT pin='3' net='14'/>
+			<HINT pin='4' net='15'/>
+			<HINT pin='5' net='16'/>
+			<HINT pin='6' net='17'/>
+			<HINT pin='7' net='18'/>
+			<HINT pin='8' net='19'/>
+			<HINT pin='9' net='28'/>
 		</SYMBOL>
 	</TinyCAD>
 </TinyCADSheets>
