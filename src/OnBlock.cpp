@@ -796,7 +796,7 @@ string COnBlock::composeInoFile(compose_option option) {
 				string type;
 				if (!Symbols.at(i).usetemp && (name2type(Symbols.at(i).varname.at(j)) == "T")) type = Symbols.at(i).type;
 				else type = name2type(Symbols.at(i).varname.at(j));
-				codetext += type + " " + name2name(Symbols.at(i).varname.at(j)) + "; // Var\n";
+				codetext += type + " " + name2name(Symbols.at(i).varname.at(j)) + "; // FB Initial Value\n";
 			}
 			codetext += "\n";
 		}
@@ -810,7 +810,7 @@ string COnBlock::composeInoFile(compose_option option) {
 			string type;
 			if (!Symbols.at(i).usetemp && (name2type(Symbols.at(i).pinname.at(j)) == "T")) type = Symbols.at(i).type;
 			else type = name2type(Symbols.at(i).pinname.at(j));
-			codetext += type + " " + name2name(Symbols.at(i).pinname.at(j)) + "; // ";
+			codetext += type + " " + name2name(Symbols.at(i).pinname.at(j)) + "; // FB ";
 			codetext += Symbols.at(i).pintype.at(j) + "\n";
 		}
 
