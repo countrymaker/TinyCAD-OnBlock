@@ -1,5 +1,5 @@
 // E:\githome\TinyCAD-OnBlock\FBExample\FBexample1\FBexample1.ino composed in TinyCad-OnBlock 2021
-// 2021-12-03 00:31:46 created.
+// 2021-12-03 20:51:02 created.
 // 5 FB-classes generated.
 // 6 FB-instances generated.
 // Unconnected FBs are ignored.
@@ -149,9 +149,6 @@ void initFBs() {
 	FB1.init();
 	FB2.value = FB1.cpu;
 
-	FB2.init();
-	FB2.exec();
-
 	FB3.init();
 	FB3.exec();
 	FB5.a = FB3.out;
@@ -159,6 +156,9 @@ void initFBs() {
 	FB6.init();
 	FB6.exec();
 	FB5.b = FB6.out;
+
+	FB2.init();
+	FB2.exec();
 
 	FB5.init();
 	FB5.exec();
@@ -172,13 +172,13 @@ void loopFBs() {
 	FB1.exec();
 	FB2.value = FB1.cpu;
 
-	FB2.exec();
-
 	FB3.exec();
 	FB5.a = FB3.out;
 
 	FB6.exec();
 	FB5.b = FB6.out;
+
+	FB2.exec();
 
 	FB5.exec();
 	FB4.in = FB5.c;

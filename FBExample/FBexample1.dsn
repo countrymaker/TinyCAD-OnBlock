@@ -69,7 +69,7 @@ download the executable.-->
 			<CHARSET>0</CHARSET>
 			<FACENAME>Calibri</FACENAME>
 		</FONT>
-		<STYLE id='2'>
+		<STYLE id='3'>
 			<STYLE>0</STYLE>
 			<COLOR>000000</COLOR>
 			<THICKNESS>1</THICKNESS>
@@ -179,10 +179,10 @@ void loop() { idlecnt++; }
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='52.00000,28.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='25.00000,13.00000' b='48.00000,21.00000' style='2' fill='2'/>
-				<RECTANGLE a='25.00000,13.00000' b='48.00000,28.00000' style='2' fill='0'/>
+				<RECTANGLE a='25.00000,13.00000' b='48.00000,21.00000' style='3' fill='2'/>
+				<RECTANGLE a='25.00000,13.00000' b='48.00000,28.00000' style='3' fill='0'/>
 				<PIN pos='52.00000,23.00000' which='0' elec='1' direction='2' part='0' number='1' show='0' length='20' number_pos='0' centre_name='0'>uint32_t cyclecnt</PIN>
-				<RECTANGLE a='25.00000,13.00000' b='48.00000,17.00000' style='2' fill='3'/>
+				<RECTANGLE a='25.00000,13.00000' b='48.00000,17.00000' style='3' fill='3'/>
 				<TEXT pos='30.00000,16.50000' direction='3' font='5' color='000000'>ESP32C3_core</TEXT>
 				<TEXT pos='27.00000,20.00000' direction='3' font='4' color='FF0000'>cycle time[ms]:</TEXT>
 				<TEXT pos='37.00000,24.00000' direction='3' font='3' color='FF0000'>cycle count</TEXT>
@@ -253,9 +253,9 @@ void exec() {
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='43.00000,26.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='25.00000,13.00000' b='43.00000,21.00000' style='2' fill='2'/>
-				<RECTANGLE a='25.00000,13.00000' b='43.00000,26.00000' style='2' fill='0'/>
-				<RECTANGLE a='25.00000,13.00000' b='43.00000,17.00000' style='2' fill='3'/>
+				<RECTANGLE a='25.00000,13.00000' b='43.00000,21.00000' style='3' fill='2'/>
+				<RECTANGLE a='25.00000,13.00000' b='43.00000,26.00000' style='3' fill='0'/>
+				<RECTANGLE a='25.00000,13.00000' b='43.00000,17.00000' style='3' fill='3'/>
 				<TEXT pos='29.00000,16.50000' direction='3' font='5' color='000000'>print_value</TEXT>
 				<PIN pos='21.00000,24.00000' which='0' elec='0' direction='3' part='0' number='1' show='0' length='20' number_pos='0' centre_name='0'>T value</PIN>
 				<TEXT pos='26.00000,25.00000' direction='3' font='3' color='FF0000'>value</TEXT>
@@ -321,10 +321,10 @@ void exec() { out = digitalRead(pin_num); }</DEFAULT>
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='36.00000,25.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='24.00000,21.00000' b='34.00000,25.00000' style='2' fill='2'/>
+				<RECTANGLE a='24.00000,21.00000' b='34.00000,25.00000' style='3' fill='2'/>
 				<PIN pos='36.00000,23.00000' which='0' elec='1' direction='2' part='0' number='1' show='0' length='10' number_pos='0' centre_name='0'>bool out</PIN>
 				<TEXT pos='27.00000,24.00000' direction='3' font='3' color='008000'>pin:</TEXT>
-				<RECTANGLE a='24.00000,21.00000' b='26.00000,25.00000' style='2' fill='3'/>
+				<RECTANGLE a='24.00000,21.00000' b='26.00000,25.00000' style='3' fill='3'/>
 				<TEXT pos='24.50000,24.50000' direction='3' font='6' color='000000'>&gt;</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
@@ -384,17 +384,17 @@ void exec() { c = a &amp;&amp; b; }</DEFAULT>
 				<PIN pos='55.00000,53.00000' which='0' elec='0' direction='3' part='0' number='1' show='0' length='10' number_pos='0' centre_name='0'>bool a</PIN>
 				<PIN pos='63.00000,54.00000' which='0' elec='1' direction='2' part='0' number='3' show='0' length='10' number_pos='0' centre_name='0'>bool c</PIN>
 				<PIN pos='55.00000,55.00000' which='0' elec='0' direction='3' part='0' number='2' show='0' length='10' number_pos='0' centre_name='0'>bool b</PIN>
-				<POLYGON pos='57.00000,52.00000' style='2' fill='0' polygon='0'>
+				<POLYGON pos='57.00000,52.00000' style='3' fill='0' polygon='0'>
 					<POINT pos='2.00000,0.00000' arc='0'/>
 					<POINT pos='0.00000,0.00000' arc='0'/>
 					<POINT pos='0.00000,4.00000' arc='0'/>
 					<POINT pos='2.00000,4.00000' arc='0'/>
 				</POLYGON>
-				<POLYGON pos='59.00000,52.00000' style='2' fill='0' polygon='0'>
+				<POLYGON pos='59.00000,52.00000' style='3' fill='0' polygon='0'>
 					<POINT pos='2.00000,2.00000' arc='0'/>
 					<POINT pos='0.00000,0.00000' arc='2'/>
 				</POLYGON>
-				<POLYGON pos='59.00000,54.00000' style='2' fill='0' polygon='0'>
+				<POLYGON pos='59.00000,54.00000' style='3' fill='0' polygon='0'>
 					<POINT pos='0.00000,2.00000' arc='0'/>
 					<POINT pos='2.00000,0.00000' arc='1'/>
 				</POLYGON>
@@ -459,10 +459,10 @@ void exec() { digitalWrite(pin_num, in); }</DEFAULT>
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='34.00000,25.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='24.00000,21.00000' b='34.00000,25.00000' style='2' fill='2'/>
+				<RECTANGLE a='24.00000,21.00000' b='34.00000,25.00000' style='3' fill='2'/>
 				<PIN pos='22.00000,23.00000' which='0' elec='0' direction='3' part='0' number='1' show='0' length='10' number_pos='0' centre_name='0'>bool in</PIN>
 				<TEXT pos='25.00000,24.00000' direction='3' font='3' color='008000'>pin:</TEXT>
-				<RECTANGLE a='32.00000,21.00000' b='34.00000,25.00000' style='2' fill='3'/>
+				<RECTANGLE a='32.00000,21.00000' b='34.00000,25.00000' style='3' fill='3'/>
 				<TEXT pos='32.50000,24.50000' direction='3' font='6' color='000000'>&gt;</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
@@ -483,7 +483,7 @@ void exec() { digitalWrite(pin_num, in); }</DEFAULT>
 			<COLOR_NOTETEXT_TEXT>FF0000</COLOR_NOTETEXT_TEXT>
 		</OPTIONS>
 		<SYMBOL id='1' pos='38.00000,29.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='0' description='Ref' value='FB1' show='1' pos='-27.00000,-15.00000'/>
+			<FIELD type='0' description='Ref' value='FB1' show='0' pos='-27.00000,-15.00000'/>
 			<FIELD type='1' description='Name' value='ESP32C3_core' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='#include &lt;string&gt;
 uint32_t cycle = 0, idlecnt = 0, idlecnt_max = 1;
@@ -523,7 +523,7 @@ void loop() { idlecnt++; }
 			<HINT pin='2' net='2'/>
 		</SYMBOL>
 		<SYMBOL id='2' pos='79.00000,29.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='FB2' show='1' pos='-18.00000,-13.00000'/>
+			<FIELD type='1' description='Ref' value='FB2' show='0' pos='-18.00000,-13.00000'/>
 			<FIELD type='1' description='Name' value='print_value' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() {}
 
@@ -536,12 +536,12 @@ void exec() {
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='peri' show='0' pos='0.00000,-5.00000'/>
 			<FIELD type='1' description='Type' value='int' show='0' pos='0.00000,-3.00000'/>
-			<FIELD type='0' description='Seq' value='1' show='1' pos='-1.00000,-13.00000'/>
+			<FIELD type='0' description='Seq' value='2' show='1' pos='-1.00000,-13.00000'/>
 			<FIELD type='0' description='string key' value='&quot;cpu(%) = &quot;' show='1' pos='-12.00000,-6.00000'/>
 			<HINT pin='1' net='2'/>
 		</SYMBOL>
 		<SYMBOL id='3' pos='24.00000,43.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='0' description='Ref' value='FB3' show='1' pos='-12.00000,-4.00000'/>
+			<FIELD type='0' description='Ref' value='FB3' show='0' pos='-12.00000,-4.00000'/>
 			<FIELD type='1' description='Name' value='digital_in' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { pinMode(pin_num, INPUT); }
 
@@ -555,7 +555,7 @@ void exec() { out = digitalRead(pin_num); }' show='0' pos='0.00000,0.00000'/>
 			<HINT pin='1' net='3'/>
 		</SYMBOL>
 		<SYMBOL id='3' pos='24.00000,51.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='0' description='Ref' value='FB6' show='1' pos='-12.00000,-4.00000'/>
+			<FIELD type='0' description='Ref' value='FB6' show='0' pos='-12.00000,-4.00000'/>
 			<FIELD type='1' description='Name' value='digital_in' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { pinMode(pin_num, INPUT); }
 
@@ -578,13 +578,13 @@ void exec() { c = a &amp;&amp; b; }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='logic' show='0' pos='0.00000,1.00000'/>
 			<FIELD type='1' description='Type' value='bool' show='0' pos='0.00000,3.00000'/>
-			<FIELD type='0' description='Seq' value='1' show='1' pos='0.00000,-3.00000'/>
+			<FIELD type='0' description='Seq' value='2' show='1' pos='-1.00000,-4.00000'/>
 			<HINT pin='1' net='3'/>
 			<HINT pin='2' net='4'/>
 			<HINT pin='3' net='5'/>
 		</SYMBOL>
 		<SYMBOL id='5' pos='79.00000,44.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='0' description='Ref' value='FB4' show='1' pos='-10.00000,-4.00000'/>
+			<FIELD type='0' description='Ref' value='FB4' show='0' pos='-10.00000,-4.00000'/>
 			<FIELD type='1' description='Name' value='digital_out' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE' value='void init() { pinMode(pin_num, OUTPUT); }
 
@@ -593,7 +593,7 @@ void exec() { digitalWrite(pin_num, in); }' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='peri' show='0' pos='0.00000,4.00000'/>
 			<FIELD type='1' description='Type' value='bool' show='0' pos='0.00000,6.00000'/>
-			<FIELD type='0' description='Seq' value='1' show='1' pos='-1.00000,-4.00000'/>
+			<FIELD type='0' description='Seq' value='3' show='1' pos='-1.00000,-4.00000'/>
 			<FIELD type='0' description='uint8_t pin_num' value='18' show='1' pos='-5.00000,-1.00000'/>
 			<HINT pin='1' net='5'/>
 		</SYMBOL>

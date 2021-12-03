@@ -49,7 +49,7 @@ void exec() {
 			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
 			<attribute name="Package">peri</attribute>
 			<attribute name="Type">int</attribute>
-			<attribute name="Seq">1</attribute>
+			<attribute name="Seq">2</attribute>
 			<attribute name="string key">&quot;cpu(%) = &quot;</attribute>
 		</part>
 		<part ref="FB3" name="digital_in">
@@ -82,7 +82,7 @@ void exec() { c = a &amp;&amp; b; }</attribute>
 			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
 			<attribute name="Package">logic</attribute>
 			<attribute name="Type">bool</attribute>
-			<attribute name="Seq">1</attribute>
+			<attribute name="Seq">2</attribute>
 		</part>
 		<part ref="FB4" name="digital_out">
 			<attribute name="$$SPICE">void init() { pinMode(pin_num, OUTPUT); }
@@ -92,7 +92,7 @@ void exec() { digitalWrite(pin_num, in); }</attribute>
 			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
 			<attribute name="Package">peri</attribute>
 			<attribute name="Type">bool</attribute>
-			<attribute name="Seq">1</attribute>
+			<attribute name="Seq">3</attribute>
 			<attribute name="uint8_t pin_num">18</attribute>
 		</part>
 	</parts>
