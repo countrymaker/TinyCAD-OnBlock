@@ -221,6 +221,8 @@ void COnBlock::getValidParts() {
 				}
 			}
 		}
+
+		for (i = 0; i < Parts.size(); i++) if (Parts.at(i).pack == "core") Parts.at(i).ncout = false;
 	}
 
 	for (j = 0, i = 0; i < Parts.size(); i++) {
