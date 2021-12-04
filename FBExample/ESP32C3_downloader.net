@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<netlist design="E:\githome\TinyCAD-OnBlock\FBexample\ESP32C3_downloader.dsn">
+	<parts>
+		<part ref="U1" name="ESP-C3-13">
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">FP_ESP-C3-13</attribute>
+		</part>
+		<part ref="J1" name="Header9_2.0mm">
+			<attribute name="Package">FP_Header9_2.0mm</attribute>
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+		</part>
+		<part ref="J2" name="Header9_2.0mm">
+			<attribute name="Package">FP_Header9_2.0mm</attribute>
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+		</part>
+		<part ref="SW1" name="SW Push Button">
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">FP_TactSW_SM6.0mm</attribute>
+		</part>
+		<part ref="J5" name="JST_PH5_2.0mm">
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">FP_JST_PH5_2.0mm</attribute>
+		</part>
+		<part ref="D1" name="1N4148">
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">PF_DS_SM3216</attribute>
+		</part>
+		<part ref="D2" name="1N4148">
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">PF_DS_SM3216</attribute>
+		</part>
+		<part ref="C1" name="105">
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">PF_TH200mil</attribute>
+		</part>
+		<part ref="J3" name="JST_PH5_2.0mm">
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">FP_JST_PH5_2.0mm</attribute>
+		</part>
+		<part ref="J4" name="Header6">
+			<attribute name="$$SPICE_PROLOG_PRIORITY">5</attribute>
+			<attribute name="$$SPICE_EPILOG_PRIORITY">5</attribute>
+			<attribute name="Package">FP_Header6</attribute>
+		</part>
+	</parts>
+	<nets>
+		<net name="_N_1" number="1">
+			<pin part="U1" name="RX0" number="11" type="Input"/>
+			<pin part="J3" name="3" number="3" type="Passive"/>
+			<pin part="J2" name="" number="8" type="Passive"/>
+		</net>
+		<net name="_N_2" number="2">
+			<pin part="U1" name="TX0" number="12" type="Input"/>
+			<pin part="J3" name="2" number="2" type="Passive"/>
+			<pin part="J2" name="" number="7" type="Passive"/>
+		</net>
+		<net name="_N_3" number="3">
+			<pin part="U1" name="IO18" number="13" type="Input"/>
+			<pin part="J2" name="6" number="6" type="Passive"/>
+		</net>
+		<net name="_N_4" number="4">
+			<pin part="U1" name="IO19" number="14" type="Input"/>
+			<pin part="J2" name="5" number="5" type="Passive"/>
+		</net>
+		<net name="_N_5" number="5">
+			<pin part="U1" name="IO3" number="15" type="Input"/>
+			<pin part="J2" name="4" number="4" type="Passive"/>
+		</net>
+		<net name="_N_6" number="6">
+			<pin part="U1" name="IO2" number="16" type="Input"/>
+			<pin part="J2" name="3" number="3" type="Passive"/>
+		</net>
+		<net name="_N_7" number="7">
+			<pin part="U1" name="IO1" number="17" type="Input"/>
+			<pin part="J2" name="2" number="2" type="Passive"/>
+		</net>
+		<net name="_N_8" number="8">
+			<pin part="U1" name="IO0" number="18" type="Input"/>
+			<pin part="J2" name="1" number="1" type="Passive"/>
+		</net>
+		<net name="_N_9" number="9">
+			<pin part="U1" name="IO10" number="10" type="Input"/>
+			<pin part="J2" name="" number="9" type="Passive"/>
+		</net>
+		<net name="_N_10" number="10">
+			<pin part="J1" name="1" number="1" type="Passive"/>
+			<pin part="U1" name="3V3" number="1" type="Input"/>
+		</net>
+		<net name="_N_11" number="11">
+			<pin part="J1" name="2" number="2" type="Passive"/>
+			<pin part="J3" name="4" number="4" type="Passive"/>
+			<pin part="U1" name="EN" number="2" type="Input"/>
+		</net>
+		<net name="_N_12" number="12">
+			<pin part="J1" name="3" number="3" type="Passive"/>
+			<pin part="U1" name="IO4" number="3" type="Input"/>
+		</net>
+		<net name="_N_13" number="13">
+			<pin part="J1" name="4" number="4" type="Passive"/>
+			<pin part="U1" name="IO5" number="4" type="Input"/>
+		</net>
+		<net name="_N_14" number="14">
+			<pin part="J1" name="5" number="5" type="Passive"/>
+			<pin part="U1" name="IO6" number="5" type="Input"/>
+		</net>
+		<net name="_N_15" number="15">
+			<pin part="J1" name="6" number="6" type="Passive"/>
+			<pin part="U1" name="IO7" number="6" type="Input"/>
+		</net>
+		<net name="_N_16" number="16">
+			<pin part="J1" name="" number="7" type="Passive"/>
+			<pin part="U1" name="IO8" number="7" type="Input"/>
+		</net>
+		<net name="_N_17" number="17">
+			<pin part="J1" name="" number="8" type="Passive"/>
+			<pin part="J3" name="1" number="1" type="Passive"/>
+			<pin part="U1" name="IO9" number="8" type="Input"/>
+		</net>
+		<net name="_N_18" number="18">
+			<pin part="J1" name="" number="9" type="Passive"/>
+			<pin part="J3" name="5" number="5" type="Passive"/>
+			<pin part="U1" name="GND" number="9" type="Input"/>
+		</net>
+		<net name="_N_19" number="19">
+			<pin part="D1" name="2" number="2" type="Passive"/>
+			<pin part="J5" name="1" number="1" type="Passive"/>
+		</net>
+		<net name="_N_20" number="20">
+			<pin part="D2" name="2" number="2" type="Passive"/>
+			<pin part="J5" name="3" number="3" type="Passive"/>
+		</net>
+		<net name="_N_21" number="21">
+			<pin part="D2" name="1" number="1" type="Passive"/>
+			<pin part="J4" name="3" number="3" type="Passive"/>
+		</net>
+		<net name="_N_22" number="22">
+			<pin part="J5" name="2" number="2" type="Passive"/>
+			<pin part="J4" name="2" number="2" type="Passive"/>
+		</net>
+		<net name="_N_23" number="23">
+			<pin part="C1" name="2" number="2" type="Passive"/>
+			<pin part="SW1" name="2" number="2" type="Passive"/>
+			<pin part="J5" name="4" number="4" type="Passive"/>
+		</net>
+		<net name="_N_24" number="24">
+			<pin part="C1" name="1" number="1" type="Passive"/>
+			<pin part="D1" name="1" number="1" type="Passive"/>
+			<pin part="J4" name="1" number="1" type="Passive"/>
+		</net>
+		<net name="_N_25" number="25">
+			<pin part="SW1" name="1" number="1" type="Passive"/>
+			<pin part="J5" name="5" number="5" type="Passive"/>
+			<pin part="J4" name="5" number="5" type="Passive"/>
+		</net>
+		<net name="_N_26" number="26">
+			<pin part="J4" name="4" number="4" type="Passive"/>
+		</net>
+		<net name="_N_27" number="27">
+			<pin part="J4" name="6" number="6" type="Passive"/>
+		</net>
+	</nets>
+</netlist>
+
