@@ -692,10 +692,10 @@ string COnBlock::generateKicadNetlist() {
 	codetext += "\t(components\n";
 	for (i = 0; i < Parts.size(); i++) {
 		if (Parts.at(i).isfb) continue;
-		codetext += "\t\t(comp (ref " + Parts.at(i).refname += ")\n";
+		codetext += "\t\t(comp (ref \"" + Parts.at(i).refname += "\")\n";
 		codetext += "\t\t\t(value \"" + Parts.at(i).symname + "\")\n";
 		codetext += "\t\t\t(footprint \"" + Parts.at(i).pack; codetext += "\")\n";
-		codetext += "\t\t\t(tstamp " + to_string(timestamp++) + ")\n";
+		codetext += "\t\t\t(tstamp \"" + to_string(timestamp++) + "\")\n";
 		codetext += "\t\t)\n";
 	}
 	codetext += "\t)\n";
