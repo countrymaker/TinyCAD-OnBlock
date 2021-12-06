@@ -54,12 +54,12 @@
 	</parts>
 	<nets>
 		<net name="GND" number="18">
+			<pin part="J4" name="5" number="5" type="Passive"/>
 			<pin part="J3" name="5" number="5" type="Passive"/>
-			<pin part="J1" name="" number="9" type="Passive"/>
-			<pin part="U1" name="GND" number="9" type="Input"/>
 			<pin part="SW1" name="1" number="1" type="Passive"/>
 			<pin part="J5" name="5" number="5" type="Passive"/>
-			<pin part="J4" name="5" number="5" type="Passive"/>
+			<pin part="J1" name="" number="9" type="Passive"/>
+			<pin part="U1" name="GND" number="9" type="Input"/>
 		</net>
 		<net name="_N_2" number="1">
 			<pin part="U1" name="RX0" number="11" type="Input"/>
